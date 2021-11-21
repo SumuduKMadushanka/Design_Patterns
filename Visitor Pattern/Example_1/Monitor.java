@@ -86,7 +86,7 @@ public class Monitor extends Hardware {
 
     @Override
     public void printDetails() {
-        System.out.println("----Print Monitor Details ----");
+        System.out.println("---- Print Monitor Details ----");
         System.out.println("Brand Name: " + this.getBrandName());
         this.display.printDisplay();
 

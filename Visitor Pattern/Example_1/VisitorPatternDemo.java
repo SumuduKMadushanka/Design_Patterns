@@ -9,6 +9,8 @@ public class VisitorPatternDemo {
         ArrayList<ComputerComponent> computerComponents = new ArrayList<>();
 
         Monitor m1, m2, m3, m4;
+        OperatingSystem os1, os2, os3, os4;
+        
         m1 = new Monitor("ASUS ROG STRIX XG49VQ SUPER ULTRA-WIDE HDR GAMING MONITOR 49\" (3840 X 1080), 144HZ", 
             new Display(49, "32:9", "VA", "LED", "3840x1080", "Non-Glare", 4, true, 144), 
             1, 2, 2, 47, 240, 120, 249000.0);
@@ -25,10 +27,20 @@ public class VisitorPatternDemo {
             new Display(34, "21:9", "IPS", "LED", "3440 x 1440", "Ultra-Wide QHD", 1, true, 100), 
             1, 2, 2, 65, 240, 130, 205000.0);
 
+        os1 = new OperatingSystem("Windows 11", "Windows", "1 GHz 64-bit", 4, 64);
+        os2 = new OperatingSystem("Windows 10", "Windows", "1 GHz", 1, 16);
+        os3 = new OperatingSystem("Windows 7", "Windows", "1 GHz 32-bit", 1, 16);
+        os4 = new OperatingSystem("Kali Linux", "Linux", "Intel Core i3", 2, 20);
+
         computerComponents.add(m1);
         computerComponents.add(m2);
         computerComponents.add(m3);
         computerComponents.add(m4);
+
+        computerComponents.add(os1);
+        computerComponents.add(os2);
+        computerComponents.add(os3);
+        computerComponents.add(os4);
 
         for (ComputerComponent computerComponent : computerComponents) {
             computerComponent.printDetails();
