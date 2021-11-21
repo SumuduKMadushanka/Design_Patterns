@@ -24,5 +24,10 @@ public abstract class Software implements ComputerComponent {
     public String getComponentType() {
         return this.componentType;
     }
+
+    @Override
+    public void accept(ComputerComponentVisitor componentVisitor) {
+        componentVisitor.visit(this);
+    }
     
 }

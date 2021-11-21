@@ -42,5 +42,10 @@ public abstract class Hardware implements ComputerComponent {
     public double getPrice() {
         return this.price;
     }
+
+    @Override
+    public void accept(ComputerComponentVisitor computerComponentVisitor) {
+        computerComponentVisitor.visit(this);
+    }
     
 }

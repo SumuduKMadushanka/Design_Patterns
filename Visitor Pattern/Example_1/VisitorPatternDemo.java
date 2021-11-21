@@ -10,7 +10,7 @@ public class VisitorPatternDemo {
 
         Monitor m1, m2, m3, m4;
         OperatingSystem os1, os2, os3, os4;
-        
+
         m1 = new Monitor("ASUS ROG STRIX XG49VQ SUPER ULTRA-WIDE HDR GAMING MONITOR 49\" (3840 X 1080), 144HZ", 
             new Display(49, "32:9", "VA", "LED", "3840x1080", "Non-Glare", 4, true, 144), 
             1, 2, 2, 47, 240, 120, 249000.0);
@@ -36,14 +36,24 @@ public class VisitorPatternDemo {
         computerComponents.add(m2);
         computerComponents.add(m3);
         computerComponents.add(m4);
-
         computerComponents.add(os1);
         computerComponents.add(os2);
         computerComponents.add(os3);
         computerComponents.add(os4);
 
+        ComputerComponentPartitioner computerComponentPartitioner = new ComputerComponentPartitioner();
         for (ComputerComponent computerComponent : computerComponents) {
-            computerComponent.printDetails();
+            computerComponent.accept(computerComponentPartitioner);
+        }
+
+        System.out.println("Number of Hardware: " + computerComponentPartitioner.getHardwares().size());
+        System.out.println("Number of Software: " + computerComponentPartitioner.getSoftwares().size());
+
+        System.out.println();
+
+        System.out.println("------ Print Software ------");
+        for (Software software : computerComponentPartitioner.getSoftwares()) {
+            software.printDetails();
             System.out.println();
         }
     }

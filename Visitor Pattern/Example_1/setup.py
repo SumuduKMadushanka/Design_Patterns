@@ -24,7 +24,8 @@ def compile(file_name, bin_location):
 def main():
     # Define Variables
     bin_location = ".\\bin"
-    file_name_list = ["ComputerComponent", "Hardware", "Software", "Display", "Monitor", "OperatingSystem", "VisitorPatternDemo"]
+    file_name_list = ["ComputerComponent", "Hardware", "Software", "Display", "Monitor", "OperatingSystem", \
+        "ComputerComponentVisitor", "ComputerComponentPartitioner", "VisitorPatternDemo"]
 
     print("-------- Start Compiling Visitor Pattern Java files --------")
 
