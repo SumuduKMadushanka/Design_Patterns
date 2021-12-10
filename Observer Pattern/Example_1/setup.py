@@ -24,9 +24,9 @@ def compile(file_name, bin_location):
 def main():
     # Define Variables
     bin_location = ".\\bin"
-    file_name_list = ["ObserverPatternDemo"]
+    file_name_list = ["Phone", "PhoneUser", "AppleUser", "SamsungUser", "HuaweiUser", "PhoneShop", "ObserverPatternDemo"]
 
-    print("-------- Start Compiling Visitor Pattern Java files --------")
+    print("-------- Start Compiling Observer Pattern Java files --------")
 
     if not (os.path.exists(bin_location)):
         os.mkdir(bin_location)
@@ -35,7 +35,7 @@ def main():
     for file_name in file_name_list:
         compile(file_name, bin_location)
 
-    print("-------- Complete the Visitor Pattern Compilation Successfully --------")
+    print("-------- Complete the Observer Pattern Compilation Successfully --------")
 
 
 if __name__ == "__main__":
