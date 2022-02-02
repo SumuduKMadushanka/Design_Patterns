@@ -1,0 +1,13 @@
+{
+    "project_name"      : "Observer Pattern",
+    "bin_location"      : ".\\bin",
+    "file_name_list"    : [
+        "Phone",
+        "PhoneUser",
+        "AppleUser",
+        "SamsungUser",
+        "HuaweiUser",
+        "PhoneShop",
+        "ObserverPatternDemo"
+    ]
+}
